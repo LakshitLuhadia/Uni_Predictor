@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Predictor</title>
+    <link rel="stylesheet" href="C:\Users\admin\Desktop\idea-2\style.css" type="text/css" media="all">
+</head>
+
+<body>
+    <div class="form-container">
+        <form method="POST" action="{{ url_for('index') }}">
+            <div class="input-group">
+                <label for="gre">GRE Score:</label>
+                <input type="number" id="gre" name="gre" required>
+            </div>
+            <div class="input-group">
+                <label for="toefl">TOEFL Score:</label>
+                <input type="number" id="toefl" name="toefl" required>
+            </div>
+            <div class="input-group">
+                <label for="uni_rating">University Rating:</label>
+                <input type="number" id="uni_rating" name="uni_rating" required>
+            </div>
+            <div class="input-group">
+                <label for="sop">SOP:</label>
+                <input type="number" id="sop" name="sop" required>
+            </div>
+            <div class="input-group">
+                <label for="lor">LOR:</label>
+                <input type="number" id="lor" name="lor" required>
+            </div>
+            <div class="input-group">
+                <label for="cgpa">CGPA:</label>
+                <input type="number" id="cgpa" name="cgpa" required>
+            </div>
+            <div class="input-group">
+                <label for="research">Research:</label>
+                <input type="number" id="research" name="research" required>
+            </div>  
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+    <p> Prediction: {{ output }} </p>
+</body>
+
+</html>
